@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- Wrapper Class -->
@@ -18,8 +19,8 @@
           class="display"
           data-passwordDisplay
         />
-        <button data-copy>
-          <span data-copyMsg></span>
+        <button class = "copyBtn" data-copy>
+          <span class= "tooltip" data-copyMsg></span>
           <img src="./asset/copy.svg" alt="copy" width="23" height="23" />
         </button>
       </div>
@@ -34,24 +35,24 @@
           type="range"
           min="1"
           max="20"
-          clas="slider"
+          class="slider"
           step="1"
           data-lengthSlider
         />
         <!--CheckBoxes  -->
-        <div>
+        <div class ="check">
           <input type="checkbox" id="uppercase" />
           <label for="uppercase">Includes UpperCase Letters</label>
         </div>
-        <div>
+        <div class ="check">
           <input type="checkbox" id="lowercase" />
           <label for="lowercase">Includes Lowercase Letters</label>
         </div>
-        <div>
+        <div class ="check">
           <input type="checkbox" id="numbers" />
           <label for="numbers">Includes Numbers</label>
         </div>
-        <div>
+        <div class ="check">
           <input type="checkbox" id="symbols" />
           <label for="symbols">Includes Symbols</label>
         </div>

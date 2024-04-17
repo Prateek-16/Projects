@@ -16,12 +16,17 @@ let password = "";
 let passwordLength = 10;
 let checkCount = 0;
 handleSlider();
+setIndicator("#ccc");
 //set strength circle to grey
 
 //Set PasswordLength
 function handleSlider(){
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    inputSlider.style.backgroundSize = ((passwordLength - min)*100/(max-min)) + "% 100%"
+     
 }
 
 function getRndInteger(min,max){
@@ -48,6 +53,7 @@ function generateSymbol(){
 function setIndicator(color){
     indicator.style.backgroundColor = color;
     //shadow
+    indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
 
 function calcStrength(){
